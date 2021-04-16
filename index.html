@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>John Amiscaray</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons"
+          rel="stylesheet">
+</head>
+<body>
+    <nav id="content-nav">
+        <a onclick="scrollToAboutMe();" style="--order: 1">About Me</a>
+        <a onclick="scrollToSkills();" style="--order: 2">Skills</a>
+        <a onclick="scrollToExperience();" style="--order: 3">Experience</a>
+        <a href="https://www.section.io/engineering-education/authors/john-amiscaray/" style="--order: 4">Articles</a>
+        <a href="#page-footer" style="--order: 5">Connect</a>
+    </nav>
+    <div id="opening-profile-thing">
+        <img src="assets/me.jpg" alt="me" id="me">
+        <div id="profile-text">
+            <h3>John Amiscaray</h3>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et
+                dolore magna aliqua. Tristique senectus et netus et malesuada fames. Id venenatis a condimentum vitae
+                sapien pellentesque.
+            </p>
+        </div>
+    </div>
+
+    <svg id="about-me-background" viewBox="0 0 1000 1000">
+        <polygon
+                points="-730,950 -730,200 1730,50 1730,850"
+                style="stroke: rgb(0,191,255);
+                fill: rgb(0,191,255);
+                stroke-width: 5;">
+        </polygon>
+    </svg>
+
+    <div id="about-me">
+        <img src="assets/about-me.jpg" alt="me-again" id="me-again"/>
+        <div id="about-me-content">
+            <h3>About Me</h3>
+            <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore
+                et dolore magna aliqua. Tristique senectus et netus et malesuada fames. Id venenatis a condimentum
+                vitae sapien pellentesque. Elit at imperdiet dui accumsan sit amet nulla facilisi. Netus et malesuada
+                fames ac turpis egestas maecenas pharetra. Sagittis vitae et leo duis. Leo duis ut diam quam. Id cursus
+                metus aliquam eleifend mi in nulla posuere sollicitudin. Erat nam at lectus urna duis convallis
+                convallis tellus. Et molestie ac feugiat sed. Dictum non consectetur a erat nam at. Duis ut diam quam
+                nulla. Cursus mattis molestie a iaculis at erat pellentesque adipiscing. Quis auctor elit sed vulputate
+                mi sit amet mauris. Non nisi est sit amet facilisis magna etiam tempor. Ut consequat semper viverra nam
+                libero justo. Cras ornare arcu dui vivamus arcu felis bibendum. Ac tincidunt vitae semper quis lectus
+                nulla at.
+            </p>
+        </div>
+    </div>
+    <div id="skills">
+        <div id="skills-content">
+        <span id="laptop-icon" class="material-icons material-icons-outlined">
+        laptop
+        </span>
+            <div id="skills-content-left">
+                <h3>Languages</h3>
+                <ul class="skills-list">
+                    <li>Java</li>
+                    <li>Javascript</li>
+                    <li>Python</li>
+                    <li>HTML</li>
+                    <li>CSS</li>
+                </ul>
+            </div>
+            <div id="skills-content-right">
+                <h3>Frameworks</h3>
+                <ul class="skills-list">
+                    <li>Angular</li>
+                    <li>Spring Boot</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div id="experience-section">
+        <svg viewBox="0 0 1440 632" fill="none" xmlns="http://www.w3.org/2000/svg" id="experience-background">
+            <rect
+                x="0" y="500" width="1440" height="132"
+                    style="stroke: rgb(75,70,70);
+                fill: rgb(75,70,70);
+                stroke-width: 5;">
+            </rect>
+            <path id="experience-wave" d="M0 91.5918C0 422.857 1440 -185.356 1440 91.5918C1440 368.54 1440 729.805 1440 557.073C1440 384.341 0 754.134 0 587.892C0 421.65 0 -239.673 0 91.5918Z" fill="#0FE178"/>
+        </svg>
+
+        <div id="experience-content">
+            <h1>Experience</h1>
+            <div id="experience-text">
+                <span class="material-icons" id="article-icon">article</span>
+                <p>
+                    Contract Technical Writer for Section's Engineering Education program. Writes beginner to intermediate level
+                    content, mainly focused on Java programming.
+                </p>
+            </div>
+        </div>
+
+    </div>
+    <footer id="page-footer">
+        <h3>Connect</h3>
+        <a href="https://github.com/john-amiscaray">
+            <svg width="65" height="66" viewBox="0 0 65 66" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <ellipse id="Github Logo" cx="32.3706" cy="33.0482" rx="32.3706" ry="32.8565" fill="url(#pattern0)"/>
+                <defs>
+                    <pattern id="pattern0" patternContentUnits="objectBoundingBox" width="1" height="1">
+                        <use xlink:href="#image0" transform="translate(-0.00750523) scale(0.00845842 0.00833333)"/>
+                    </pattern>
+                    <image id="image0" data-name="GitHub-Mark-120px-plus.png" width="120" height="120" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAHgAAAB4CAYAAAA5ZDbSAAAAGXRFWHRTb2Z0d2FyZQBBZG9iZSBJbWFnZVJlYWR5ccllPAAAAyRpVFh0WE1MOmNvbS5hZG9iZS54bXAAAAAAADw/eHBhY2tldCBiZWdpbj0i77u/IiBpZD0iVzVNME1wQ2VoaUh6cmVTek5UY3prYzlkIj8+IDx4OnhtcG1ldGEgeG1sbnM6eD0iYWRvYmU6bnM6bWV0YS8iIHg6eG1wdGs9IkFkb2JlIFhNUCBDb3JlIDUuMy1jMDExIDY2LjE0NTY2MSwgMjAxMi8wMi8wNi0xNDo1NjoyNyAgICAgICAgIj4gPHJkZjpSREYgeG1sbnM6cmRmPSJodHRwOi8vd3d3LnczLm9yZy8xOTk5LzAyLzIyLXJkZi1zeW50YXgtbnMjIj4gPHJkZjpEZXNjcmlwdGlvbiByZGY6YWJvdXQ9IiIgeG1sbnM6eG1wPSJodHRwOi8vbnMuYWRvYmUuY29tL3hhcC8xLjAvIiB4bWxuczp4bXBNTT0iaHR0cDovL25zLmFkb2JlLmNvbS94YXAvMS4wL21tLyIgeG1sbnM6c3RSZWY9Imh0dHA6Ly9ucy5hZG9iZS5jb20veGFwLzEuMC9zVHlwZS9SZXNvdXJjZVJlZiMiIHhtcDpDcmVhdG9yVG9vbD0iQWRvYmUgUGhvdG9zaG9wIENTNiAoTWFjaW50b3NoKSIgeG1wTU06SW5zdGFuY2VJRD0ieG1wLmlpZDpFNTE3OEEzMjk5QTAxMUUyOUExNUJDMTA0NkE4OTA0RCIgeG1wTU06RG9jdW1lbnRJRD0ieG1wLmRpZDoyQTQxNEFCQzk5QTExMUUyOUExNUJDMTA0NkE4OTA0RCI+IDx4bXBNTTpEZXJpdmVkRnJvbSBzdFJlZjppbnN0YW5jZUlEPSJ4bXAuaWlkOkU1MTc4QTMwOTlBMDExRTI5QTE1QkMxMDQ2QTg5MDREIiBzdFJlZjpkb2N1bWVudElEPSJ4bXAuZGlkOkU1MTc4QTMxOTlBMDExRTI5QTE1QkMxMDQ2QTg5MDREIi8+IDwvcmRmOkRlc2NyaXB0aW9uPiA8L3JkZjpSREY+IDwveDp4bXBtZXRhPiA8P3hwYWNrZXQgZW5kPSJyIj8+R7ClIwAADR5JREFUeNrsnQuw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"/>
+                </defs>
+            </svg>
+        </a>
+        <a href="https://www.linkedin.com/in/john-amiscaray-7333a91b2/">
+            <svg width="67" height="66" viewBox="0 0 67 66" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                <g id="LinkedIn Logo">
+                    <rect id="Rectangle 6" x="1.68939" y="1.45984" width="62.2561" height="61.6059" fill="#FFFCFC"/>
+                    <rect id="Rectangle 5" x="0.207092" y="0.0909424" width="66.703" height="65.7129" fill="url(#pattern1)"/>
+                </g>
+                <defs>
+                    <pattern id="pattern1" patternContentUnits="objectBoundingBox" width="1" height="1">
+                        <use xlink:href="#image1" transform="translate(0 -0.00753321) scale(0.00390625)"/>
+                    </pattern>
+                    <image id="image1" data-name="Linkedin-logo-for-resume.png" width="256" height="256" xlink:href="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAQAAAAEACAMAAABrrFhUAAAB7FBMVEUAAAAKZswMaMQLZ8ILZ8MLZsMKZ8IKZsIkbdsMZsMKZsMKZsOAgP8LaMMKZsMRZsQKZ8MNaMILZ8MMaMIKZsMKZ8ILZsMLZsILZ8ILZ8MMaMQMZ8UOZ8gMZ8IPacMLZ8ILZ8MLaMYLZ8IaZswKZ8MLaMINZsILZ8MMZsIzZswNZ8UKZ8MKZ8INa8MKZsMRZswLZsMLZsQMZ8QVatULZ8MSbcgLZsMKZsIOacQKZ8MMZ8MLZsQKZsINZ8ULZ8QLZ8MLZsULZsMLZsMPbMkKZsIKZ8MLZ8MNasYLaspVqv8rgNUPacMTaMYNZsQLaMQKaMMKZ8MKZ8MKZ8MMaMQLacJAgP8LasUKZ8MLZ8MKZ8ILZ8MMaMMLZsQKZ8ILZ8MOccYNZ8MLZsMLZ8MKacMKZ8QKZ8MQa8ULZ8IOasUMascKZsP///8MZ8MXdNEMbcIKZ8QLZ8INacQLZ8MNaMMKZsIKZsMMZsQLZsQKZ8MLZ8ILb8gKZsMOasYOZsMMZ8MMaMULZsMKZ8INa8kMa8QPZsUKZsMKZ8MKZ8MLZsILZsMKZ8IKZsILZ8IKZsMKZ8MLZsILZsIMZ8QLZ8IKZsIMZsMNacQLZsQSbcgLZsMLZ8MNZswLZ8McccYLZ8QMZ8ILZ8MLZsIKZsIKZsMLZsPDZ/nSAAAApHRSTlMAGWekv9nz/wduyP4CXeAeyzvpWPnJpdaPb1Y+JW0iwdNHqAr9dlBymwU5rfsm+g+7dVcMug6nrDjHmnD8T3SmRsC+IfeZdzoYAwYRGzxbe8T2smwuBDBm7vipQI7i0BJNtpwzkqsfnzUp3AFqCxVjij3xUfT1QV+VzheYJDeDLNR+Eysj4eSuoOrfxbWvzPDmUrixa05aHOizFEgJoyqItNvl8nYMZNQAAAWFSURBVHja7d3pWxtVFAbwk2SSm5DJPgFadhooUKArXShbAbVgxQLFUsVKxWorVEvFrVqqtrbWpe5a96X/qB9QnwBZ7oTowz3nfb/PYc4PmJnMPXCJsuPx+ix/QLFNwG/5vB7Kk2CoIqwEJFwRCuZo345ElZhEI/bG/mNxJSrx2Pr+E0klLMlEdv8pR4mLk8r6/gvsXynn35+BWFKJTPLv64AdV0ITX7sXRJTYRIiIglG5ANEgEYWU4ISIKC0ZIE3kCUsGCHvIq0THS5WyASrJkg1gkV82gJ8CsgECpIQHAAAAAAAAAAAAAAAAAAAAAAAAAABopap6x86a2tqanTuqq+QBWHX12Qvr9XWWKICGxObhmkSDGIDGptzjVU2NMgCad+UbMNvVLAAg00IF0pLhDpBppYJpzTAH2E1Fsps3QBsVTRtngIr24gDtFYwBOkgjHXwB9pBW9nAF6OzSA+jqZArQTJppZgqQ0gVI8QTo3qsLsLebJcA+0s4+lgD79QH2swQ4oA9wgCVAjT5ADUuAWn2AWpYAB/UBDgIAvwK4COI2iAchbgCH9AEO8fww1KPbfw/PD0P6FwHzLgF6AId1AQ5zfSWm+SRQy/WVmDqiB3BEcQVQR3X6P6r4AhzTWRg5xhhA9RYH6FWcAdTxYv0fV7wB+voL99/PfXlc9Q0U6n+gT3EHUGow/4jMoFICAFTjUO7+h4QMSSmlTuQakzuhlBgApYbrRrK7H6kbVkoUgFKqqjq0Niobkjgqyy0AAAAAAAAAAAAAAAAAAAAAsE0zmn7k0dRj9Sd7xsYfP9X1xMSTbacnxQAEpqbPzGx+BzPz1FnfLH+Ac083FViPmXlm7lnWAOdDzxVbirDnL2T+JwC9xdFSj9x8VOfzC3pfcuQFhyPAxS79qZwXX+rjBjB8iVzl8jArgJebyG0WlwJ8AHqvUAkZsZgAJOeptIzNsQCYeoVKzqvd5gNcXaQtZHnWcIDMNG0tl64ZDTD5Gm01iRWDAV5fpq3njUljAZwhKkcmjAV4k8qTtwwFmCtT/zSeNhLg7fZyAVBs1kCAvjNUvpw1EKCljP2TnTYPoLxZyAgHcHcn4AhwfVQ4AL0jHeDdjHAAuigd4IZ0ABebBzEFWJUOcFM6AL0nHeB9FgCLH9y63VPaoQnTAewbq6c/dJRSyrlzd6nL9fHBc0YDdHx0b32Vj6eDLkt8YjDAwqc56txZGndV5KqxALc/y3MO90+5KdNvKsD853lP4gs3cwMnzQSwVwttgjv6pYtSKyYCXPmqyNxYQr9Wo4EA9lSx87h3XbvY1wYCVBc/kbvlLLbdAL7ROZN53Woh4wCWtcbdzusOUXxrGsDifb1TadWsV2MawHeaN+4Lus+ThgEEo5oAme/1Cl42DGBA+x3OkuYysVkAYw+0AX7Qq/ijWQA/6b/IXhnTqvizWQC/uFjNulX62WxfgKQLgAmGAL+6WdH+jSGAq7mWQYYA1W4AGhgC/O4G4A+GAK7+Hc8DhgB/ugG4xhDA1aC7wxDA3d8/MgRQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAP81AN8AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAcwEPZ/T90sT8ry/jJkg1gkU82gI+8sgG85AlL7j/sIUpLBqgg7U3JeCZELrZ4YphokIgoIhcgQkREdlxq/3F7bR05lpTZfzL2z0p6wpHYv5O1g2tKoICTyp6mSIj7LUhu2ME3JuxKGI9tnKixI4KeB6IRO8dQUTCUFvG5IJwOBfMNVnm8lZY/wLf3gN/yeT3rWv4LoBGU53rXBC0AAAAASUVORK5CYII="/>
+                </defs>
+            </svg>
+        </a>
+
+    </footer>
+    <script src="main.js"></script>
+</body>
+</html>
