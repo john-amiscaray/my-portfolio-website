@@ -47,7 +47,7 @@ addEventListener('scroll', () => {
 
 function scrollToAboutMe(){
 
-    window.scrollTo(0, 564);
+    window.scrollTo(0, 520);
 
 }
 
