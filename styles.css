@@ -129,10 +129,19 @@ h3{
     top: 200px;
     display: block;
     margin: 0 auto;
-    width: 829px;
-    height: 215px;
+    width: 900px;
+    height: 300px;
     animation: grow-in 2s ease;
     animation-fill-mode: both;
+
+}
+
+#me{
+
+    width: 35%;
+    height: 100%;
+    border-radius: 150px;
+    animation: fade-in 1.5s;
 
 }
 
@@ -146,23 +155,14 @@ h3{
 
 #profile-text h3{
 
-    font-size: 28px;
+    font-size: 32px;
     line-height: 0;
 
 }
 
 #profile-text p{
 
-    font-size: 16px;
-
-}
-
-#me{
-
-    width: 239px;
-    height: 215px;
-    border-radius: 150px;
-    animation: fade-in 1.5s;
+    font-size: 18px;
 
 }
 
@@ -205,6 +205,7 @@ h3{
 #about-me-content p{
 
     width: 100%;
+    font-size: 20px;
 
 }
 
@@ -222,15 +223,6 @@ h3{
     text-align: center;
 
 }
-
-/*#skills h3{*/
-
-/*    position: relative;*/
-/*    top: -40px;*/
-/*    width: 100%;*/
-/*    text-align: center;*/
-
-/*}*/
 
 #skills-content{
 
@@ -325,6 +317,15 @@ h3{
     position: relative;
     top: 30px;
     margin-top: 0;
+    font-size: 17px;
+
+}
+
+#experience-text p{
+
+    font-size: 17px;
+    width: 80%;
+    margin-left: 55px;
 
 }
 
