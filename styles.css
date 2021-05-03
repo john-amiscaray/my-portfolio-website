@@ -315,17 +315,27 @@ h3{
 #experience-text{
 
     position: relative;
+    display: flex;
+    gap: 10px;
     top: 30px;
     margin-top: 0;
-    font-size: 17px;
+    text-align: left;
+    font-size: 16px;
+
+}
+
+#experience-text *{
+
+    display: block;
 
 }
 
 #experience-text p{
 
     font-size: 17px;
-    width: 80%;
-    margin-left: 55px;
+    flex-basis: 80%;
+    flex-shrink: 3;
+    margin: 0;
 
 }
 
@@ -333,6 +343,8 @@ h3{
 
     font-size: 100px;
     float: left;
+    flex-basis: 20%;
+    flex-shrink: 1;
 
 }
 
