@@ -128,7 +128,7 @@ h3{
     top: 200px;
     display: block;
     margin: 0 auto;
-    width: 100%;
+    width: 900px;
     height: 300px;
     animation: grow-in 2s ease;
     animation-fill-mode: both;
@@ -388,10 +388,17 @@ footer *{
 
     }
 
-    #me{
+    #profile-text{
 
-        margin-left: 25px;
+        margin-left: 10px;
 
     }
+
+    #profile-text p{
+
+        font-size: 20px;
+
+    }
+
 
 }
