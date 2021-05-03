@@ -57,7 +57,6 @@
 
 }
 
-
 html{
     font-family: Montserrat, serif;
     scroll-behavior: smooth;
@@ -120,6 +119,16 @@ h3{
 
     color: var(--primary);
     cursor: pointer;
+
+}
+
+@media only screen and (max-width: 768px) {
+
+    #content-nav{
+
+        display: none;
+
+    }
 
 }
 
