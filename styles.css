@@ -122,23 +122,13 @@ h3{
 
 }
 
-@media only screen and (max-width: 768px) {
-
-    #content-nav{
-
-        display: none;
-
-    }
-
-}
-
 #opening-profile-thing{
 
     position: relative;
     top: 200px;
     display: block;
     margin: 0 auto;
-    width: 900px;
+    width: 100%;
     height: 300px;
     animation: grow-in 2s ease;
     animation-fill-mode: both;
@@ -184,6 +174,7 @@ h3{
     margin: 0;
     padding: 0;
     overflow: hidden;
+
 }
 #about-me{
 
@@ -377,3 +368,30 @@ footer *{
 
 }
 
+@media only screen and (max-width : 768px) {
+
+    html, body{
+
+        width: 950px;
+
+    }
+
+    #content-nav{
+
+        display: none;
+
+    }
+
+    #about-me-content{
+
+        width: 450px;
+
+    }
+
+    #me{
+
+        margin-left: 25px;
+
+    }
+
+}
