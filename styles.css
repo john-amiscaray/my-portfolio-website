@@ -400,5 +400,11 @@ footer *{
 
     }
 
+    #about-me-background, #about-me, #skills, #experience-section{
+
+        animation: drop-in 1s;
+
+    }
+
 
 }
