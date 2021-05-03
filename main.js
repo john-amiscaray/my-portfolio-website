@@ -10,7 +10,7 @@ let experienceWave = document.getElementById('experience-wave');
 let experienceContent = document.getElementById('experience-content');
 
 // Check if device is mobile
-let isMobile = document.getElementById('content-nav').style.display === '';
+let isMobile = window.getComputedStyle(document.getElementById('content-nav')).display === 'none';
 
 function isElementInViewport(el) {
     let rect = el.getBoundingClientRect();
