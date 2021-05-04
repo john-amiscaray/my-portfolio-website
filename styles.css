@@ -103,6 +103,7 @@ h3{
     content: "";
 
 }
+
 #content-nav a{
 
     position: relative;
@@ -376,11 +377,13 @@ footer *{
 
     }
 
+
     #content-nav{
 
         display: none;
 
     }
+
 
     #about-me-content{
 
@@ -394,13 +397,20 @@ footer *{
 
     }
 
+    #content-nav{
+
+        justify-content: start;
+        gap: 100px;
+
+    }
+
     #profile-text p{
 
         font-size: 20px;
 
     }
 
-    #about-me-background, #about-me, #skills, #experience-section{
+    #about-me-background, #about-me, #skills, #experience-wave, #experience-content{
 
         animation: drop-in 1s;
 
