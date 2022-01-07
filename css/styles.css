@@ -1,6 +1,6 @@
 @font-face {
     font-family: code;
-    src: url("assets/JetBrainsMono-Regular.ttf");
+    src: url("../assets/JetBrainsMono-Regular.ttf");
 }
 
 @keyframes fade-in {
