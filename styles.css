@@ -3,6 +3,12 @@
     src: url("assets/JetBrainsMono-Regular.ttf");
 }
 
+@keyframes fade-in {
+
+    from{ opacity: 0; }
+    to{ opacity: 100%; }
+
+}
 
 body{
 
@@ -32,6 +38,8 @@ article{
     background-color: #3C3F41;
     box-shadow: gray 0 1px 2px;
     margin-bottom: 20px;
+    animation-name: fade-in;
+    animation-duration: 5s;
 
 }
 
