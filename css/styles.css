@@ -114,7 +114,14 @@ header{
 
     object-fit: cover;
     box-shadow: black -10px 15px 8px;
-    border: 1px dotted rgba(119,136,153, 0.5)
+    border: 1px dotted rgba(119,136,153, 0.5);
+    transition: all 250ms;
+
+}
+
+.carousel-item:active img{
+
+    box-shadow: none;
 
 }
 
