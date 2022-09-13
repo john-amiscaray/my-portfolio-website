@@ -19,6 +19,18 @@ body{
 
 }
 
+.header-main, article header{
+
+    margin: 20px auto;
+
+}
+
+section .subheader{
+
+    padding-left: 0;
+
+}
+
 ul.navbar-nav a:hover { color: #A4C15F !important; }
 
 .nav-item{ 
@@ -35,7 +47,27 @@ ul.navbar-nav a:hover { color: #A4C15F !important; }
 
 article{
 
-    margin-bottom: 20px;
+    margin-bottom: 40px;
+
+}
+
+.about-wrapper{
+
+    display: flex;
+    flex-direction: horizontal;
+    gap: 40px;
+
+}
+
+.about-content{
+
+    flex-grow: 1;
+
+}
+
+#who-am-i header{
+
+    margin-top: 0;
 
 }
 
@@ -93,6 +125,10 @@ header{
     max-height: 300px;
     border-radius: 5px;
 
+}
+
+#me{
+    width: 377px;
 }
 
 #about-content{
