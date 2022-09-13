@@ -110,18 +110,31 @@ header{
 
 }
 
-.carousel-item img{
+.carousel-item img[data-bs-target]{
 
     object-fit: cover;
+    border-radius: 100%;
     box-shadow: black -10px 15px 8px;
     border: 1px dotted rgba(119,136,153, 0.5);
-    transition: all 250ms;
+    transition: all 300ms;
 
 }
 
-.carousel-item:active img{
+.carousel-item:active img[data-bs-target]{
 
-    box-shadow: none;
+    box-shadow: black -2px 3px 2px;
+
+}
+
+.carousel-item img#kotlin, .carousel-item img#typescript{
+
+    border-radius: 0%;
+
+}
+
+.carousel-item img#java{
+
+    border-radius: 25%;
 
 }
 
@@ -179,4 +192,23 @@ footer{
 
     }
 
+}
+
+.point-indicator {
+    position: absolute;
+    bottom: 60px;
+    right: 0;
+    left: 47%;
+    z-index: 20000;
+}
+
+.blink {
+    animation: blink-animation 750ms steps(5, start) infinite;
+}
+
+@keyframes blink-animation {
+    to {
+        visibility: hidden;
+        border-color: white;
+    }
 }
