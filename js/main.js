@@ -19,6 +19,6 @@ function changeLanguageModalText(language){
     $('#language-modal-info').text(languageDes);
 }
 
-$('.carousel-item.active').on('click', () => {
+$('img[data-bs-target="#language-info"]').on('click', () => {
     $('.point-indicator').hide(500);
 });
