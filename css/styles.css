@@ -129,6 +129,8 @@ header{
 
 #me{
     width: 377px;
+    max-width: 90vw;
+    display: block;
 }
 
 #about-content{
@@ -227,30 +229,12 @@ footer{
 
 }
 
-@media screen and (max-width: 830px){
-
-    .image-wrapper{
-
-        margin-bottom: 30px;
-
-    }
-
-}
-
 .point-indicator {
     position: absolute;
     bottom: 60px;
     right: 0;
     left: 47%;
     z-index: 20000;
-}
-
-@media screen and (max-width: 400px){
-
-    .point-indicator {
-        bottom: 150px;
-    }
-
 }
 
 .blink {
@@ -280,5 +264,37 @@ footer{
 .hero-wrapper{
 
     margin-bottom: 20px;
+
+}
+
+@media screen and (max-width: 800px) {
+
+    #about-content{
+        max-height: none;
+    }
+   
+    .about-wrapper{
+        flex-direction: column;
+    }
+
+    #me{
+        margin: 0 auto;
+    }
+
+}
+
+@media screen and (max-width: 400px){
+
+    .point-indicator {
+        bottom: 150px;
+    }
+
+    #education-section{
+        margin-top: -60px;
+    }
+
+    .carousel-inner{
+        height: 425px;
+    }
 
 }
