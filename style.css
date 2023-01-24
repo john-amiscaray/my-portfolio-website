@@ -1,5 +1,27 @@
+@font-face {
+    font-family: code;
+    src: url("./assets/JetBrainsMono-Regular.ttf");
+}
+
+:root {
+
+    font-family: code sans-serif;
+
+}
+
 canvas {
     position: fixed;
     top: 0;
     left: 0;
+}
+
+main {
+
+    width: 100vw;
+    z-index: 99;
+    color: white;
+    position: absolute;
+    margin: 0 auto;
+    padding: 120px 0;
+
 }
