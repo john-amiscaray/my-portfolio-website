@@ -21,6 +21,16 @@ camera.position.z = 5;
 camera.position.y = 1.5;
 
 scene.add(pointLight, sunLight);
+const geo = new THREE.SphereGeometry(6);
+const mat = new THREE.MeshStandardMaterial({
+    map: new THREE.TextureLoader().load('./assets/moonTexture.jpg')
+})
+
+const mesh = new THREE.Mesh(geo, mat);
+
+mesh.position.z = -10;
+
+scene.add(mesh);
 
 function animate() {
 
