@@ -35,7 +35,7 @@ bloomComposer.addPass( bloomPass );
 renderer.setPixelRatio(window.devicePixelRatio);
 
 const pointLight = new THREE.PointLight(0xffffff);
-pointLight.position.set(0,7,-20);
+pointLight.position.set(2,7,-20);
 
 const sunLight = new THREE.HemisphereLight(0x404040, 0xFFFFFF, 0.5);
 
@@ -77,6 +77,7 @@ function animate() {
     camera.layers.enable(ENTIRE_SCENE);
     renderer.clearDepth();
     renderer.render(scene, camera);
+    mesh.rotateY(Math.PI / 2048);
 
 }
 
