@@ -9,17 +9,17 @@
 
     0%{
         color: #26FF00;
-        text-shadow: white 1px 1px 1px;
+        text-shadow: gray 2px 2px 2px;
     }
 
     50%{
         color: #e54b4b;
-        text-shadow: white 1px 1px 1px;
+        text-shadow: gray 2px 2px 2px;
     }
 
     100%{
         color: #26FF00;
-        text-shadow: white 1px 1px 1px;
+        text-shadow: gray 2px 2px 2px;
     }
 
 }
@@ -55,8 +55,6 @@ main {
     justify-content: center;
     height: 30vw;
     font-size: 3rem;
-    color: #26FF00;
-    text-shadow: white 1px 1px 1px;
     animation-iteration-count: infinite;
     animation-name: neon-color-fade;
     animation-duration: 4s;

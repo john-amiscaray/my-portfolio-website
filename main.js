@@ -2,6 +2,7 @@ import * as THREE from 'three';
 import { UnrealBloomPass } from 'three/examples/jsm/postprocessing/UnrealBloomPass.js';
 import { EffectComposer } from 'three/examples/jsm/postprocessing/EffectComposer.js';
 import { RenderPass } from 'three/examples/jsm/postprocessing/RenderPass.js';
+import { getGlowShaderUniforms, getGlowVertexShader, getGlowFragmentShader } from "./shaders.js";
 
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
@@ -17,7 +18,7 @@ bloomLayer.set( BLOOM_SCENE );
 const params = {
     bloomStrength: 5,
     bloomThreshold: 0,
-    bloomRadius: 0.4
+    bloomRadius: 0
 };
 
 bloomPass.threshold = params.bloomThreshold;
@@ -47,8 +48,11 @@ camera.position.y = 1.5;
 
 scene.add(pointLight, sunLight);
 const geo = new THREE.SphereGeometry(6);
-const mat = new THREE.MeshStandardMaterial({
-    map: new THREE.TextureLoader().load('./assets/moonTexture.jpg')
+const mat = new THREE.ShaderMaterial({
+    uniforms: getGlowShaderUniforms(new THREE.TextureLoader().load('./assets/moonTexture.jpg')),
+    vertexShader: getGlowVertexShader(),
+    fragmentShader: getGlowFragmentShader(),
+    lights: true
 })
 
 const mesh = new THREE.Mesh(geo, mat);
