@@ -47,23 +47,23 @@ camera.position.z = 5;
 camera.position.y = 1.5;
 
 scene.add(pointLight, sunLight);
-const geo = new THREE.SphereGeometry(6);
-const mat = new THREE.ShaderMaterial({
+const moonGeo = new THREE.SphereGeometry(6);
+const moonMat = new THREE.ShaderMaterial({
     uniforms: getGlowShaderUniforms(new THREE.TextureLoader().load('./assets/moonTexture.jpg')),
     vertexShader: getGlowVertexShader(),
     fragmentShader: getGlowFragmentShader(),
     lights: true
 })
 
-const mesh = new THREE.Mesh(geo, mat);
-mesh.layers.enable(BLOOM_SCENE);
-console.log(mesh.layers);
+const moonMesh = new THREE.Mesh(moonGeo, moonMat);
+moonMesh.layers.enable(BLOOM_SCENE);
+console.log(moonMesh.layers);
 
-mesh.position.x = pointLight.position.x;
-mesh.position.y = pointLight.position.y;
-mesh.position.z = pointLight.position.z;
+moonMesh.position.x = pointLight.position.x;
+moonMesh.position.y = pointLight.position.y;
+moonMesh.position.z = pointLight.position.z;
 
-scene.add(mesh);
+scene.add(moonMesh);
 
 camera.layers.set(BLOOM_SCENE);
 camera.layers.set(ENTIRE_SCENE);
@@ -81,7 +81,7 @@ function animate() {
     camera.layers.enable(ENTIRE_SCENE);
     renderer.clearDepth();
     renderer.render(scene, camera);
-    mesh.rotateY(Math.PI / 2048);
+    moonMesh.rotateY(Math.PI / 2048);
 
 }
 
