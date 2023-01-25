@@ -53,12 +53,11 @@ main {
 
     display: flex;
     justify-content: center;
-    gap: 5vw;
     height: 30vw;
     font-size: 3rem;
     color: #26FF00;
     text-shadow: white 1px 1px 1px;
-    animation-iteration-count: 3;
+    animation-iteration-count: infinite;
     animation-name: neon-color-fade;
     animation-duration: 4s;
 
