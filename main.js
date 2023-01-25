@@ -9,7 +9,6 @@ const camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.inner
 const renderScene = new RenderPass( scene, camera );
 const bloomPass = new UnrealBloomPass( new THREE.Vector2( window.innerWidth, window.innerHeight ), 1.5, 0.4, 0.85 );
 
-const ENTIRE_SCENE = 0;
 const BLOOM_SCENE = 1;
 
 const bloomLayer = new THREE.Layers();
@@ -57,7 +56,6 @@ const moonMat = new THREE.ShaderMaterial({
 
 const moonMesh = new THREE.Mesh(moonGeo, moonMat);
 moonMesh.layers.enable(BLOOM_SCENE);
-console.log(moonMesh.layers);
 
 moonMesh.position.x = pointLight.position.x;
 moonMesh.position.y = pointLight.position.y;
@@ -65,8 +63,20 @@ moonMesh.position.z = pointLight.position.z;
 
 scene.add(moonMesh);
 
-camera.layers.set(BLOOM_SCENE);
-camera.layers.set(ENTIRE_SCENE);
+const geometry = new THREE.TorusGeometry(2, 1.2, 4, 100);
+const material = new THREE.ShaderMaterial({
+    uniforms: getGlowShaderUniforms(new THREE.TextureLoader().load('./assets/galaxy_texture.jpg')),
+    vertexShader: getGlowVertexShader(),
+    fragmentShader: getGlowFragmentShader(),
+    lights: true
+});
+const torus = new THREE.Mesh(geometry, material);
+
+torus.position.z = -100;
+torus.position.y = -20;
+torus.position.x = -140;
+
+scene.add(torus);
 
 function animate() {
 
@@ -75,13 +85,12 @@ function animate() {
     renderer.autoClear = false;
     renderer.clear();
 
-    camera.layers.enable(BLOOM_SCENE);
     bloomComposer.render();
 
-    camera.layers.enable(ENTIRE_SCENE);
     renderer.clearDepth();
     renderer.render(scene, camera);
     moonMesh.rotateY(Math.PI / 2048);
+    torus.rotateZ(Math.PI / 2048);
 
 }
 
