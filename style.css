@@ -13,8 +13,8 @@
     }
 
     50%{
-        color: rgba(256,256,256,0.3);
-        text-shadow: white 5px 5px 5px;
+        color: #e54b4b;
+        text-shadow: white 1px 1px 1px;
     }
 
     100%{
