@@ -59,6 +59,7 @@ main {
     animation-name: neon-color-fade;
     animation-duration: 4s;
     margin: 0 auto 40px auto;
+    opacity: 0.8;
 
 }
 
@@ -70,12 +71,15 @@ main {
 
 .content-section {
 
-    background-color: white;
+    background-color: #EFF7FF;
     width: 80vw;
     padding: 20px;
     display: block;
     margin: 0 auto;
     border-radius: 5px;
+    opacity: 0.6;
+    box-shadow: white 3px 3px 3px;
+    border: #DEE6EE;
 
 }
 
