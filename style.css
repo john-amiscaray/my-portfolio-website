@@ -8,17 +8,17 @@
 @keyframes neon-color-fade {
 
     0%{
-        color: #26FF00;
+        color: #0496ff;
         text-shadow: gray 2px 2px 2px;
     }
 
     50%{
-        color: #e54b4b;
+        color: #ff9914;
         text-shadow: gray 2px 2px 2px;
     }
 
     100%{
-        color: #26FF00;
+        color: #0496ff;
         text-shadow: gray 2px 2px 2px;
     }
 
@@ -29,6 +29,7 @@
     font-family: code, sans-serif;
     text-align: center;
     overflow-x: hidden;
+    color: black;
 
 }
 
@@ -53,10 +54,39 @@ main {
 
     display: flex;
     justify-content: center;
-    height: 30vw;
     font-size: 3rem;
     animation-iteration-count: infinite;
     animation-name: neon-color-fade;
     animation-duration: 4s;
+    margin: 0 auto 40px auto;
+
+}
+
+#page-nav {
+
+
+
+}
+
+.content-section {
+
+    background-color: white;
+    width: 80vw;
+    padding: 20px;
+    display: block;
+    margin: 0 auto;
+    border-radius: 5px;
+
+}
+
+.content-section * {
+
+    margin: 0;
+
+}
+
+.content-section header{
+
+    margin-bottom: 10px;
 
 }

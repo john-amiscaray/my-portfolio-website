@@ -63,20 +63,32 @@ moonMesh.position.z = pointLight.position.z;
 
 scene.add(moonMesh);
 
-const geometry = new THREE.TorusGeometry(2, 1.2, 4, 100);
-const material = new THREE.ShaderMaterial({
-    uniforms: getGlowShaderUniforms(new THREE.TextureLoader().load('./assets/galaxy_texture.jpg')),
-    vertexShader: getGlowVertexShader(),
-    fragmentShader: getGlowFragmentShader(),
-    lights: true
+const geometry = new THREE.TorusGeometry(4, 3, 16, 100);
+const material = new THREE.MeshStandardMaterial({
+    color: '#f21b3f'
 });
 const torus = new THREE.Mesh(geometry, material);
 
-torus.position.z = -100;
-torus.position.y = -20;
-torus.position.x = -140;
+torus.position.z = -150;
+torus.position.y = -30;
+torus.position.x = -200;
 
 scene.add(torus);
+
+function moveCamera(){
+
+    const t = document.body.getBoundingClientRect().top;
+    moonMesh.rotation.x += 0.05;
+    moonMesh.rotation.y += 0.075;
+    moonMesh.rotation.z += 0.05;
+
+    camera.position.z = t * -0.01;
+    camera.position.x = t * -0.0002;
+    camera.rotation.y = t * -0.0002;
+
+}
+
+document.body.onscroll = moveCamera;
 
 function animate() {
 
@@ -91,6 +103,8 @@ function animate() {
     renderer.render(scene, camera);
     moonMesh.rotateY(Math.PI / 2048);
     torus.rotateZ(Math.PI / 2048);
+    torus.rotateY(Math.PI / 2048);
+    torus.rotateX(Math.PI / 2048);
 
 }
 
