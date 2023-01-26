@@ -46,7 +46,7 @@ main {
     z-index: 99;
     position: absolute;
     margin: 0 auto;
-    padding: 120px 0;
+    padding: 20px 0;
 
 }
 
@@ -63,12 +63,6 @@ main {
 
 }
 
-#page-nav {
-
-
-
-}
-
 .content-section {
 
     background-color: #EFF7FF;
@@ -76,10 +70,6 @@ main {
     padding: 20px;
     display: block;
     margin: 0 auto;
-    border-radius: 5px;
-    opacity: 0.6;
-    box-shadow: white 3px 3px 3px;
-    border: #DEE6EE;
 
 }
 
@@ -99,20 +89,33 @@ main {
 
     position: fixed;
     z-index: 100;
-    width: 100%;
+    height: 30px;
+    margin: 0;
+    top: 0;
+    left: 0;
+    padding: 10px;
+    display: flex;
 
 }
 
 #page-nav ul {
 
     list-style-type: none;
-    color: white;
-    position: absolute;
-    top: 0;
-    left: 0;
     display: flex;
     flex-direction: row;
-    gap: 10px;
+    gap: 20px;
+    align-content: center;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+
+}
+
+#page-nav ul li {
+
+    height: 100%;
+    line-height: 1.8;
 
 }
 
@@ -120,5 +123,13 @@ main {
 
     text-decoration: none;
     color: white;
+
+}
+
+.content-pane {
+
+    background-color: #EFF7FF;
+    opacity: 0.6;
+    box-shadow: white 1px 1px 1px;
 
 }
