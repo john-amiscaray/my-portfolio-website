@@ -9,17 +9,17 @@
 
     0%{
         color: #0496ff;
-        text-shadow: gray 2px 2px 2px;
+        text-shadow: white 1px 1px 1px;
     }
 
     50%{
         color: #ff9914;
-        text-shadow: gray 2px 2px 2px;
+        text-shadow: white 1px 1px 1px;
     }
 
     100%{
         color: #0496ff;
-        text-shadow: gray 2px 2px 2px;
+        text-shadow: white 1px 1px 1px;
     }
 
 }
@@ -92,5 +92,33 @@ main {
 .content-section header{
 
     margin-bottom: 10px;
+
+}
+
+#page-nav {
+
+    position: fixed;
+    z-index: 100;
+    width: 100%;
+
+}
+
+#page-nav ul {
+
+    list-style-type: none;
+    color: white;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+
+}
+
+.nav-link, .nav-link:visited {
+
+    text-decoration: none;
+    color: white;
 
 }
