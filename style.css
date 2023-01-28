@@ -208,3 +208,22 @@ main {
     transform: translate(-50%, -50%);
 
 }
+
+#site-footer {
+
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    display: flex;
+    padding: 20px;
+    gap: 20px;
+
+}
+
+.icon-frame img{
+
+    object-fit: cover;
+    max-height: 35px;
+
+}
