@@ -1,8 +1,13 @@
 import * as THREE from 'three';
-import { UnrealBloomPass } from 'three/examples/jsm/postprocessing/UnrealBloomPass.js';
-import { EffectComposer } from 'three/examples/jsm/postprocessing/EffectComposer.js';
-import { RenderPass } from 'three/examples/jsm/postprocessing/RenderPass.js';
-import { getGlowShaderUniforms, getGlowVertexShader, getGlowFragmentShader } from "./shaders.js";
+import {UnrealBloomPass} from 'three/examples/jsm/postprocessing/UnrealBloomPass.js';
+import {EffectComposer} from 'three/examples/jsm/postprocessing/EffectComposer.js';
+import {RenderPass} from 'three/examples/jsm/postprocessing/RenderPass.js';
+import {
+    getGlowFragmentShader,
+    getGlowShaderUniforms,
+    getGlowVertexShader,
+    getShootingStarFragmentShader
+} from "./shaders.js";
 
 const scene = new THREE.Scene();
 const camera = new THREE.PerspectiveCamera( 75, window.innerWidth / window.innerHeight, 0.1, 1000 );
@@ -10,6 +15,8 @@ const renderScene = new RenderPass( scene, camera );
 const bloomPass = new UnrealBloomPass( new THREE.Vector2( window.innerWidth, window.innerHeight ), 1.5, 0.4, 0.85 );
 
 const BLOOM_SCENE = 1;
+const clock = new THREE.Clock();
+let shootingStars = [];
 
 const bloomLayer = new THREE.Layers();
 bloomLayer.set( BLOOM_SCENE );
@@ -75,6 +82,10 @@ torus.position.x = -200;
 
 scene.add(torus);
 
+function getRandomInRange(min, max) {
+    return Math.random() * (max - min) + min;
+}
+
 function moveCamera(){
 
     const t = document.body.getBoundingClientRect().top;
@@ -88,7 +99,42 @@ function moveCamera(){
 
 }
 
+function shootingStar() {
+
+    const geometry = new THREE.SphereGeometry(1);
+    const uniforms = {
+        dt: {
+            value: 0
+        }
+    };
+    const material = new THREE.ShaderMaterial({
+        fragmentShader: getShootingStarFragmentShader(),
+        vertexShader: getGlowVertexShader(),
+        uniforms: uniforms
+    });
+    const starMesh = new THREE.Mesh(geometry, material);
+
+    starMesh.position.x = getRandomInRange(-170, 170);
+    starMesh.position.z = -100;
+    starMesh.position.y = 80;
+
+    scene.add(starMesh);
+
+    return { mesh: starMesh, uniforms: uniforms };
+
+}
+
 document.body.onscroll = moveCamera;
+
+setInterval(() => {
+    if(!document.hidden){
+        shootingStars.push(shootingStar());
+    }
+}, 1000);
+
+let lastTime = 0;
+
+const clamp = (num, min, max) => Math.min(Math.max(num, min), max);
 
 function animate() {
 
@@ -105,6 +151,17 @@ function animate() {
     torus.rotateZ(Math.PI / 2048);
     torus.rotateY(Math.PI / 2048);
     torus.rotateX(Math.PI / 2048);
+    for(let shootingStar of shootingStars){
+        shootingStar.uniforms.dt.value += clamp(clock.getElapsedTime(), 0, 0.05);
+        shootingStar.mesh.position.y -= 1;
+        shootingStar.mesh.position.x -= 0.4
+        if(shootingStar.mesh.position.y <= -80){
+            scene.remove(shootingStar.mesh);
+        }
+    }
+    shootingStars = shootingStars.filter(shootingStar => {
+        return shootingStar.mesh.position.y > -80;
+    })
 
 }
 

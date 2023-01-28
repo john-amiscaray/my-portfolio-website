@@ -46,7 +46,7 @@ main {
     z-index: 99;
     position: absolute;
     margin: 0 auto;
-    padding: 20px 0;
+    padding: 40px 0;
 
 }
 
@@ -54,12 +54,17 @@ main {
 
     display: flex;
     justify-content: center;
-    font-size: 3rem;
     animation-iteration-count: infinite;
     animation-name: neon-color-fade;
     animation-duration: 4s;
-    margin: 0 auto 40px auto;
+    margin: 0 auto 60px auto;
     opacity: 0.8;
+
+}
+
+#title-header h1 {
+
+    font-size: 6rem;
 
 }
 
@@ -69,7 +74,9 @@ main {
     width: 80vw;
     padding: 20px;
     display: block;
-    margin: 0 auto;
+    opacity: 0.6;
+    box-shadow: white 1px 1px 1px;
+    margin: 0 auto 50px;
 
 }
 
@@ -119,17 +126,21 @@ main {
 
 }
 
-.nav-link, .nav-link:visited {
+.nav-link, .nav-link:visited, .nav-link:focus {
 
     text-decoration: none;
     color: white;
 
 }
 
-.content-pane {
+.nav-link:hover {
 
-    background-color: #EFF7FF;
-    opacity: 0.6;
-    box-shadow: white 1px 1px 1px;
+    color: gray;
+
+}
+
+.img-frame img{
+
+    display: block;
 
 }
