@@ -21,7 +21,7 @@
       <header id="title-header">
         <h1>John Amiscaray</h1>
       </header>
-      <section class="content-section">
+      <section class="content-section content-pane">
         <header>
           <h1>About Me</h1>
         </header>
@@ -29,10 +29,10 @@
           Hi 👋! My name is John Ernest Amiscaray. I am a third year computer science co-op student at TMU (formerly Ryerson). I'm passionate about software development as someone who enjoys making side projects in his free time, sometimes even getting addicted to working on one. I'm always trying to improve as a developer and as a person, looking for new challenges and things to learn. Outside of programming, I enjoy music as someone who was a huge choir boy and knows a bit of guitar.
         </p>
       </section>
-      <section class="content-section img-frame">
-        <img src="./assets/about-me.jpg" alt="me">
+      <section class="content-section content-pane img-frame">
+        <img src="assets/me.jpg" alt="me">
       </section>
-      <section class="content-section">
+      <section class="content-section content-pane">
         <header>
           <h1>Skills</h1>
         </header>
@@ -48,9 +48,22 @@
           <li>Angular</li>
         </ul>
       </section>
-      <section class="content-section img-frame">
-        <img src="./assets/me.jpg" alt="me">
-      </section>
+      <header id="project-header">
+        <h1>Projects</h1>
+      </header>
+      <div class="row" id="projects-row">
+        <div class="col col-lg-3 img-frame">
+          <span class="img-align-helper"></span>
+          <a href="https://github.com/john-amiscaray/commission"><img src="assets/commission-hero.svg" alt="commission"></a>
+        </div>
+        <div class="col col-lg-4 offset-lg-1 img-frame">
+          <a href="https://github.com/john-amiscaray/Stir"><img src="assets/stir-logo.png" alt="stir"></a>
+        </div>
+        <div class="col col-lg-3 offset-lg-1 img-frame">
+          <span class="img-align-helper"></span>
+          <a href="https://github.com/KyleDulce/ScriptingSiege"><img src="assets/scripting-siege-logo.png" alt="scripting-siege"></a>
+        </div>
+      </div>
     </main>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
     <script type="module" src="/main.js"></script>

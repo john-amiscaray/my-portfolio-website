@@ -70,13 +70,18 @@ main {
 
 .content-section {
 
-    background-color: #EFF7FF;
     width: 80vw;
     padding: 20px;
     display: block;
-    opacity: 0.6;
-    box-shadow: white 1px 1px 1px;
     margin: 0 auto 50px;
+
+}
+
+.content-pane {
+
+    background-color: #EFF7FF;
+    box-shadow: white 1px 1px 1px;
+    opacity: 0.6;
 
 }
 
@@ -141,10 +146,45 @@ main {
 
 .img-frame img {
 
-    display: block;
     object-fit: cover;
     width: 100%;
     object-position: 0 0;
     max-height: 900px;
+    vertical-align: middle;
+
+}
+
+#project-header {
+
+    margin-bottom: 50px;
+
+}
+
+#project-header h1 {
+
+    font-size: 6rem;
+    color: white;
+    text-shadow: gray 2px 1px 1px;
+
+}
+
+#projects-row {
+
+    width: 80vw;
+    margin: 0 auto;
+
+}
+
+.img-frame {
+
+    white-space: nowrap;
+
+}
+
+.img-align-helper {
+
+    display: inline-block;
+    height: 100%;
+    vertical-align: middle;
 
 }
