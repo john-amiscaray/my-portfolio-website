@@ -132,8 +132,6 @@ setInterval(() => {
     }
 }, 1000);
 
-let lastTime = 0;
-
 const clamp = (num, min, max) => Math.min(Math.max(num, min), max);
 
 function animate() {
