@@ -33,6 +33,12 @@
 
 }
 
+html {
+
+    scroll-behavior: smooth;
+
+}
+
 canvas {
     position: fixed;
     top: 0;
@@ -57,7 +63,7 @@ main {
     animation-iteration-count: infinite;
     animation-name: neon-color-fade;
     animation-duration: 4s;
-    margin: 0 auto 60px auto;
+    margin: 60px auto;
     opacity: 0.8;
 
 }
@@ -172,19 +178,33 @@ main {
 
     width: 80vw;
     margin: 0 auto;
+    gap: 80px;
+    justify-content: center;
 
 }
 
 .img-frame {
 
-    white-space: nowrap;
+    padding: 20px;
 
 }
 
-.img-align-helper {
 
-    display: inline-block;
-    height: 100%;
-    vertical-align: middle;
+.project-frame {
+
+    border: 5px solid saddlebrown;
+    padding: 20px;
+    background-color: #DDDDDD;
+    border-radius: 2px;
+
+}
+
+.project-frame a {
+
+    display: block;
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 
 }
