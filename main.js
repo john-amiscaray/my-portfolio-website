@@ -121,22 +121,18 @@ function getRandomInRange(min, max) {
 function moveCamera(){
 
     const t = document.body.getBoundingClientRect().top;
-    // TODO clean this up
-    moonMesh.rotation.x += 0.05;
-    moonMesh.rotation.y += 0.075;
-    moonMesh.rotation.z += 0.05;
+    const rotX = 0.05;
+    const rotY = 0.075;
+    const rotZ = 0.05;
+    const bodies = [moonMesh, planet1, planet2, torus];
 
-    planet1.rotation.x += 0.05;
-    planet1.rotation.y += 0.075;
-    planet1.rotation.z += 0.05;
+    for(let body of bodies){
 
-    planet2.rotation.x += 0.05;
-    planet2.rotation.y += 0.075;
-    planet2.rotation.z += 0.05;
+        body.rotation.x += rotX;
+        body.rotation.y += rotY;
+        body.rotation.z += rotZ;
 
-    torus.rotation.x += 0.05;
-    torus.rotation.y += 0.075;
-    torus.rotation.z += 0.05;
+    }
 
     camera.position.z = t * -0.01;
     camera.position.x = t * -0.0002;
