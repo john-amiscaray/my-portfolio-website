@@ -108,8 +108,8 @@ const planet2Mat = new THREE.ShaderMaterial({
 
 const planet2 = new THREE.Mesh(planet2Geo, planet2Mat);
 
-planet2.position.x = -50;
-planet2.position.y = -60;
+planet2.position.x = -100;
+planet2.position.y = -90;
 planet2.position.z = -100;
 
 scene.add(planet2);
@@ -121,6 +121,7 @@ function getRandomInRange(min, max) {
 function moveCamera(){
 
     const t = document.body.getBoundingClientRect().top;
+    // TODO clean this up
     moonMesh.rotation.x += 0.05;
     moonMesh.rotation.y += 0.075;
     moonMesh.rotation.z += 0.05;
