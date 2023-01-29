@@ -70,17 +70,49 @@ moonMesh.position.z = pointLight.position.z;
 
 scene.add(moonMesh);
 
-const geometry = new THREE.TorusGeometry(4, 3, 16, 100);
-const material = new THREE.MeshStandardMaterial({
+const torusGeometry = new THREE.TorusGeometry(4, 3, 16, 100);
+const torusMaterial = new THREE.MeshStandardMaterial({
     color: '#f21b3f'
 });
-const torus = new THREE.Mesh(geometry, material);
+const torus = new THREE.Mesh(torusGeometry, torusMaterial);
 
 torus.position.z = -150;
 torus.position.y = -30;
 torus.position.x = -200;
 
 scene.add(torus);
+
+const planet1Geo = new THREE.SphereGeometry(3);
+const planet1Mat = new THREE.ShaderMaterial({
+    uniforms: getGlowShaderUniforms(new THREE.TextureLoader().load('./assets/planet1.jpg')),
+    vertexShader: getGlowVertexShader(),
+    fragmentShader: getGlowFragmentShader(),
+    lights: true
+});
+
+const planet1 = new THREE.Mesh(planet1Geo, planet1Mat);
+
+planet1.position.x = 80;
+planet1.position.y = -20;
+planet1.position.z = -50;
+
+scene.add(planet1);
+
+const planet2Geo = new THREE.SphereGeometry(8);
+const planet2Mat = new THREE.ShaderMaterial({
+    uniforms: getGlowShaderUniforms(new THREE.TextureLoader().load('./assets/planet2.jpg')),
+    vertexShader: getGlowVertexShader(),
+    fragmentShader: getGlowFragmentShader(),
+    lights: true
+});
+
+const planet2 = new THREE.Mesh(planet2Geo, planet2Mat);
+
+planet2.position.x = -50;
+planet2.position.y = -60;
+planet2.position.z = -100;
+
+scene.add(planet2);
 
 function getRandomInRange(min, max) {
     return Math.random() * (max - min) + min;
@@ -93,6 +125,18 @@ function moveCamera(){
     moonMesh.rotation.y += 0.075;
     moonMesh.rotation.z += 0.05;
 
+    planet1.rotation.x += 0.05;
+    planet1.rotation.y += 0.075;
+    planet1.rotation.z += 0.05;
+
+    planet2.rotation.x += 0.05;
+    planet2.rotation.y += 0.075;
+    planet2.rotation.z += 0.05;
+
+    torus.rotation.x += 0.05;
+    torus.rotation.y += 0.075;
+    torus.rotation.z += 0.05;
+
     camera.position.z = t * -0.01;
     camera.position.x = t * -0.0002;
     camera.rotation.y = t * -0.0002;
@@ -101,7 +145,7 @@ function moveCamera(){
 
 function shootingStar() {
 
-    const geometry = new THREE.SphereGeometry(1);
+    const geometry = new THREE.SphereGeometry(1, 32, 0, Math.PI);
     const uniforms = {
         dt: {
             value: 0
@@ -146,6 +190,8 @@ function animate() {
     renderer.clearDepth();
     renderer.render(scene, camera);
     moonMesh.rotateY(Math.PI / 2048);
+    planet1.rotateX(Math.PI / 4096);
+    planet2.rotateZ(Math.PI / 1024);
     torus.rotateZ(Math.PI / 2048);
     torus.rotateY(Math.PI / 2048);
     torus.rotateX(Math.PI / 2048);
