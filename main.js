@@ -55,7 +55,7 @@ camera.position.y = 1.5;
 scene.add(pointLight, sunLight);
 const moonGeo = new THREE.SphereGeometry(6);
 const moonMat = new THREE.ShaderMaterial({
-    uniforms: getGlowShaderUniforms(new THREE.TextureLoader().load('./assets/moonTexture.jpg')),
+    uniforms: getGlowShaderUniforms(new THREE.TextureLoader().load('public/textures/moonTexture.jpg')),
     vertexShader: getGlowVertexShader(),
     fragmentShader: getGlowFragmentShader(),
     lights: true
@@ -84,7 +84,7 @@ scene.add(torus);
 
 const planet1Geo = new THREE.SphereGeometry(3);
 const planet1Mat = new THREE.ShaderMaterial({
-    uniforms: getGlowShaderUniforms(new THREE.TextureLoader().load('./assets/planet1.jpg')),
+    uniforms: getGlowShaderUniforms(new THREE.TextureLoader().load('public/textures/planet1.jpg')),
     vertexShader: getGlowVertexShader(),
     fragmentShader: getGlowFragmentShader(),
     lights: true
@@ -100,7 +100,7 @@ scene.add(planet1);
 
 const planet2Geo = new THREE.SphereGeometry(8);
 const planet2Mat = new THREE.ShaderMaterial({
-    uniforms: getGlowShaderUniforms(new THREE.TextureLoader().load('./assets/planet2.jpg')),
+    uniforms: getGlowShaderUniforms(new THREE.TextureLoader().load('public/textures/planet2.jpg')),
     vertexShader: getGlowVertexShader(),
     fragmentShader: getGlowFragmentShader(),
     lights: true
