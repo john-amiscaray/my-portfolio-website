@@ -1,248 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>John Amiscaray</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
-          integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="css/styles.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
-    <script src="https://code.jquery.com/jquery-3.6.1.min.js" integrity="sha256-o88AwQnZB+VDvE9tvIXrMQaPlFFSUTR+nldQm1LuPXQ=" crossorigin="anonymous"></script>
-    <meta name="viewport" content="width=device-width, initial-scale=1">
-</head>
-<body>
-    <nav class="navbar navbar-expand-lg navbar-light" id="page-nav">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">John Ernest Amiscaray</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav">
-                    <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="https://john-amiscaray.io">Blog</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="https://www.section.io/engineering-education/authors/john-amiscaray/">Programming Tutorials</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="https://github.com/john-amiscaray">Github</a>
-                    </li>
-                    <li class="nav-item">
-                        <a href="https://www.linkedin.com/in/john-amiscaray-7333a91b2/" class="nav-link">LinkedIn</a>
-                    </li>
-                </ul>
-            </div>
-        </div>
+  <head>
+    <meta charset="UTF-8" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Vite App</title>
+  </head>
+  <body>
+    <nav id="page-nav">
+      <ul>
+        <li><a class="nav-link" href="#about-me">About Me</a></li>
+        <li><a class="nav-link" href="#skills">Skills</a></li>
+        <li><a class="nav-link" href="#project-header">Projects</a></li>
+      </ul>
     </nav>
-    <main class="container">
-        <header class="row header-main">
-            <h1>All About Me!</h1>
+    <canvas id="bg"></canvas>
+    <main>
+      <header id="title-header">
+        <h1>John Amiscaray</h1>
+      </header>
+      <section class="content-section content-pane">
+        <header id="about-me">
+          <h1>About Me</h1>
         </header>
-        <article class="about-wrapper">
-            <section class="image-wrapper">
-                <img id="me" src="assets/me.jpg" alt="me">
-            </section>
-            <section id="about-content">
-                <div id="who-am-i">
-                    <header>
-                        <h3>Who am I?</h3>
-                    </header>
-                    <p>
-                        My name is John Ernest Amiscaray. I'm a second year computer science student at Toronto Metropolitan University.
-                        I'm passionate about programming spending hours on it on most days to hone my skills. Currently, I work part time as a
-                        technical writer and peer reviewer for Section's engineering education program. On my free time I'm a bit of a gamer
-                        and enjoy singing.
-                    </p>
-                </div>
-                <div id="sum-of-qual">
-                    <header>
-                        <h3>Summary of Qualifications</h3>
-                    </header>
-                    <ul>
-                        <li>Proficient in Spring Framework to develop and deploy RESTful APIs with Swagger
-                            documentation using either Java or Kotlin</li>
-                        <li>Communication skills to develop technical tutorials and teach others</li>
-                        <li>Able to create full-stack applications using Angular as the frontend and Spring as the backend</li>
-                        <li>Consistently learning new skills/technologies to satisfy my curiosity and for teaching purposes</li>
-                        <li>Working knowledge of HTML and CSS to implement page designs</li>
-                    </ul>
-                </div>
-            </section>
-        </article>
-        <article class="row">
-            <header class="row">
-                <h1>Programming Languages I've Used</h1>
-            </header>
-            <div id="languages-carousel" class="carousel slide" data-bs-ride="carousel">
-                <div class="carousel-inner">
-                    <img class="point-indicator blink" src="assets/pointer.svg"></img>
-                    <div class="carousel-item active">
-                        <img onclick="changeLanguageModalText(KT)" data-toggle="tooltip" data-placement="top" title="Click Me" src="assets/kotlin.png" id="kotlin" alt="kotlin" data-bs-toggle="modal" data-bs-target="#language-info">
-                    </div>
-                    <div class="carousel-item">
-                        <img onclick="changeLanguageModalText(JV)" data-toggle="tooltip" data-placement="top" title="Click Me" src="assets/java.svg" id="java" alt="java" data-bs-toggle="modal" data-bs-target="#language-info">
-                    </div>
-                    <div class="carousel-item">
-                        <img onclick="changeLanguageModalText(TS)" data-toggle="tooltip" data-placement="top" title="Click Me" src="assets/typescript.svg" id="typescript" alt="typescript" data-bs-toggle="modal" data-bs-target="#language-info">
-                    </div>
-                    <div class="carousel-item">
-                        <img onclick="changeLanguageModalText(LP)" data-toggle="tooltip" data-placement="top" title="Click Me" src="assets/lisp.svg" id="lisp" alt="lisp" data-bs-toggle="modal" data-bs-target="#language-info">
-                    </div>
-                </div>
-                <button class="carousel-control-prev" type="button" data-bs-target="#languages-carousel" data-bs-slide="prev">
-                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Previous</span>
-                </button>
-                <button class="carousel-control-next" type="button" data-bs-target="#languages-carousel" data-bs-slide="next">
-                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                    <span class="visually-hidden">Next</span>
-                </button>
-            </div>
-            <div class="modal fade" id="language-info" tabindex="-1" aria-hidden="true" aria-labelledby="language-info-title">
-                <div class="modal-dialog">
-                    <div class="modal-content bg-secondary">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="language-info-title">Failed to load title. Please contact the creator of this site.</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                            <p id="language-modal-info">Uses this mainly for backend web development with Spring framework.</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </article>
-        <article id="education-section" class="row">
-            <header class="row">
-                <h1>Education</h1>
-            </header>
-            <header class="row subheader">
-                <h3>Computer Science Co-op 2025 - <i>Toronto Metropolitan University (Formerly Ryerson)</i></h3>
-            </header>
-            <section class="image-wrapper col-lg-4">
-                <img id="tmu-logo" src="assets/TMU-logo.png" alt="me">
-            </section>
-            <section class="col-lg-8">
-                <ul>
-                    <li>Second year Computer Science Co-op Student</li>
-                    <li>Completed and excelled in a course where I’ve had to implement or work with various data structures in Lisp</li>
-                    <li>Quickly learned many programming languages this year such as Lisp, C, and PHP to excel in my courses</li>
-                    <li>Completed and excelled in a course on web systems development where I’ve learned the basics of responsive
-                        web design, among many fundamentals of web development</li>
-                </ul>
-            </section>
-        </article>
-        <article class="row">
-            <header class="row">
-                <h1>Experience</h1>
-            </header>
-            <header class="row subheader">
-                <h3>Junior Web Developer - SoCast Digital - May 2022 to Aug 2022</h3>
-            </header>
-            <section class="image-wrapper col-lg-4">
-                <img id="section-logo" src="assets/socast-logo.png" alt="me">
-            </section>
-            <section class="col-lg-8">
-                <ul>
-                    <li>Demonstrated adept web development skills needed to debug and add enhancements to the SoCast web platfrom. In doing so, I applied my wide knowledge of a variety of technologies such as HTML, CSS, Javascript, PHP, SQL, JQuery, and more</li>
-                    <li>Used persistence, problem solving and debugging skills to fix or resolve 30+ bugs</li>
-                </ul>
-            </section>
-            <header class="row subheader">
-                <h3>Technical Writer and Peer Reviewer - Section Engineering Education - Oct 2020 to July 2022</h3>
-            </header>
-            <section class="image-wrapper col-lg-4">
-                <img id="section-logo" src="assets/section-logo.svg" alt="me">
-            </section>
-            <section class="col-lg-8">
-                <ul>
-                    <li>Used communication skills to write several articles with the goal of simplifying complex concepts
-                        and learning new skills in the process. Topics ranged from Minecraft plugins, backend and frontend
-                        web development, unit testing, and Java as a language </li>
-                    <li>Used Git to submit new articles for review in the form of pull requests</li>
-                    <li>Mentored new writers as a part of the peer reviewer program. Did thorough code reviews of other
-                        authors’ pull requests for incoming articles</li>
-                    <li>Analyzes what concepts would be confusing to readers and plans accordingly to produce coherent work</li>
-                </ul>
-            </section>
-        </article>
-        <article class="row">
-            <header style="margin: 0 auto;">
-                <h1>Projects</h1>
-            </header>
-            <section>
-                <header class="hero-wrapper">
-                    <svg class="project-hero" id="scripting-siege-hero" viewBox="0 0 1000 400">
-                        <defs>
-                            <mask id="scripting-siege-mask" maskUnits="userSpaceOnUse">
-                                <rect width="100%" height="400px" fill="white"/>
-                                <text style="fill: black;" font-size="80" x="140" y="230">Scripting Siege</text>
-                                <text style="fill: #777777;" font-size="80" x="140" y="225">Scripting Siege</text>
-                            </mask>
-                        </defs>
-                        <image class="banner" href="assets/scripting-siege-hero.png" mask="url(#scripting-siege-mask)"></image>
-                    </svg>
-                </header>
-                <p>
-                    This was perhaps my most ambitious project which was created for the Google Solutions challenge. This
-                    project was created to help people learn basic Javascript and general programming in the form of a
-                    video game. For this project, I've developed a scratch-like pseudo-programming language specifically
-                    for the game. Additionally, I help implement the page design using HTML and CSS and assisted in further
-                    application logic. Check it out <a class="link" href="https://github.com/KyleDulce/ScriptingSiege">here!</a>
-                </p>
-            </section>
-        </article>
-        <article class="row">
-            <section>
-                <header class="hero-wrapper">
-                    <svg class="project-hero" viewBox="0 0 1000 400">
-                        <rect x="0" y="0" width="20%" height="100%" fill="#E9EBF1"></rect>
-                        <rect x="799" y="0" width="20%" height="100%" fill="#E9EBF1"></rect>
-                        <defs>
-                            <mask id="sassy-spring-mask" maskUnits="userSpaceOnUse">
-                                <rect width="100%" height="400px" fill="white"/>
-                                <text style="fill: gray;" font-size="80" x="215" y="230">Sassy Spring</text>
-                                <text style="fill: black;" font-size="80" x="215" y="225">Sassy Spring</text>
-                            </mask>
-                        </defs>
-                        <image class="banner" href="assets/sassy-spring-hero.png" mask="url(#sassy-spring-mask)"></image>
-                    </svg>
-                </header>
-                <p>
-                    This project was created for a university course on web development that I recently completed. My partner
-                    and I created a tutorial website talking about the basics of Spring Framework and Sass along with a full
-                    demo. Check it out <a class="link" href="https://www.cs.ryerson.ca/~hbobis/sassy-spring/">here!</a>
-                </p>
-            </section>
-        </article>
-        <article class="row">
-            <section>
-                <header class="hero-wrapper">
-                    <svg class="project-hero" viewBox="0 0 1000 400">
-                        <image class="banner" href="assets/commission-hero.svg"></image>
-                    </svg>
-                </header>
-                <p>
-                   This project was started a couple of years ago as a way to learn Ionic framework while learning more about WebSockets with Spring Framework.
-                   The game is a competitive party drawing game where you draw whatever the judge picks while being able to draw on other player's canvases to sabotage them.
-                   Check it out on <a class="link" href="https://github.com/john-amiscaray/commission">Github!</a>
-                </p>
-            </section>
-        </article>
-    </main>
-    <footer>
-        <header>
-            <h5>Image attributions</h5>
+        <p>
+          Hi 👋! My name is John Ernest Amiscaray. I am a third year computer science co-op student at TMU (formerly Ryerson). I'm passionate about software development as someone who enjoys making side projects in his free time, sometimes even getting addicted to working on one. I'm always trying to improve as a developer and as a person, looking for new challenges and things to learn. Outside of programming, I enjoy music as someone who was a huge choir boy and knows a bit of guitar.
+        </p>
+      </section>
+      <section class="content-section content-pane img-frame">
+        <img src="assets/me.jpg" alt="me">
+      </section>
+      <section class="content-section content-pane">
+        <header id="skills">
+          <h1>Skills</h1>
         </header>
-        <ul id="attributions">
-            <li><a class="link" href="https://commons.wikimedia.org/wiki/File:Lisp_logo.svg">Jooja</a>, <a class="link" href="https://creativecommons.org/licenses/by-sa/4.0">CC BY-SA 4.0</a>, via Wikimedia Commons</li>
+        <ul>
+          <li>Web Development</li>
+          <li>Java</li>
+          <li>Kotlin</li>
+          <li>Javascript</li>
+          <li>CSS</li>
+          <li>HTML</li>
+          <li>Spring Framework</li>
+          <li>PHP</li>
+          <li>Angular</li>
         </ul>
-    </footer>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
-    <script src="js/main.js"></script>
-</body>
+      </section>
+      <header id="project-header">
+        <h1>Projects</h1>
+      </header>
+      <div class="row" id="projects-row">
+        <div class="col col-lg-3 col-sm-12 col-12 img-frame project-frame">
+          <a href="https://github.com/john-amiscaray/commission"><img src="assets/commission-logo.svg" alt="commission"></a>
+        </div>
+        <div class="col col-lg-3 col-sm-12 col-12 img-frame project-frame">
+          <a href="https://github.com/john-amiscaray/Stir"><img src="assets/stir-logo.png" alt="stir"></a>
+        </div>
+        <div class="col col-lg-3 col-sm-12 col-12 img-frame project-frame">
+          <a href="https://github.com/KyleDulce/ScriptingSiege"><img src="assets/scripting-siege-logo.png" alt="scripting-siege"></a>
+        </div>
+      </div>
+      <footer id="site-footer" >
+        <div class="icon-frame">
+          <a href="https://github.com/john-amiscaray">
+            <img src="assets/github-mark-white.svg" alt="my github">
+          </a>
+        </div>
+        <div class="icon-frame">
+          <a href="https://www.linkedin.com/in/john-amiscaray/">
+            <img src="assets/linkedin-logo.png" alt="my linkedin">
+          </a>
+        </div>
+        <div class="icon-frame">
+          <a href="https://john-amiscaray.io">
+            <img src="assets/hashnode-icon.png" alt="my blog">
+          </a>
+        </div>
+      </footer>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+    <script type="module" src="/main.js"></script>
+  </body>
 </html>
